@@ -1,0 +1,79 @@
+canvas {
+    background-color: #000;
+}
+
+#container {
+    visibility: none;
+    width: 1200px;
+    height: 680px;
+}
+
+#action {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 43px 58px 60px 45px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+#action:active {
+    background-color: rgba(56, 137, 210, 0.65);
+}
+
+.uno {
+    position: relative;
+    left: 722px;
+    top: -463px;
+}
+
+.dos {
+    position: relative;
+    left: 736px;
+    top: -463px;
+}
+
+.tres {
+    position: relative;
+    left: 748px;
+    top: -463px;
+}
+
+.cuatro {
+    position: relative;
+    left: 390px;
+    top: -340px;
+}
+
+.cinco {
+    position: relative;
+    left: 402px;
+    top: -340px;
+}
+
+.seix {
+    position: relative;
+    left: 415px;
+    top: -340px;
+}
+
+.siete {
+    position: relative;
+    left: 57px;
+    top: -215px;
+}
+
+.ocho {
+    position: relative;
+    left: 69px;
+    top: -215px;
+}
+
+.nueve {
+    position: relative;
+    left: 81px;
+    top: -215px;
+}
+
+

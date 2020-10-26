@@ -82,5 +82,3 @@ function pintarRectangulo({ posX, posY, ancho, alto}){
 function pintarImagenDeFondo(){
     ctx.drawImage(imagenFondo, 0,0, canvas.width, canvas.height);
 }
-
-
