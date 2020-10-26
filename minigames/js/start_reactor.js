@@ -50,16 +50,8 @@ var cuadroNueve = new rect(358, 458, 100, 100);
 let cuadros = [cuadroUno, cuadroDos, cuadroTres, cuadroCuatro, cuadroCinco, cuadroSeis, cuadroSiete, cuadroOcho, cuadroNueve];
 
 window.onload = () => {
-    cuadros.forEach(cuadro => {
-        pintarRectangulo(cuadro);
-    });
+    pintarRectangulo(cuadros[ramdomCuadro]);
     pintarImagenDeFondo();
-    orbesRojos.forEach(orbe => {
-        pintarOrbes(imgOrbeRojo, orbe);
-    });
-    orbesVerdes.forEach(orbe => {
-        pintarOrbes(imgOrbeVerde, orbe);
-    });
 }
 
 function limpiarTablero(){
@@ -77,3 +69,9 @@ function pintarRectangulo({ posX, posY, ancho, alto}){
 function pintarOrbes(orbe, {posX, posY, ancho, alto}){
     ctx.drawImage(orbe, posX, posY, ancho, alto);
 }
+
+function getRandomNumber(rango) {
+    return parseInt(Math.random() * rango);
+}
+
+var ramdomCuadro = getRandomNumber(9);

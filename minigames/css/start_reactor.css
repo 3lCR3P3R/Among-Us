@@ -14,8 +14,8 @@ canvas {
     text-decoration: none;
     padding: 43px 58px 60px 45px;
     background-color: transparent;
-    border-radius: 6px;
-    border: 2px solid black;
+    border-radius: 10px;
+    border: 2px solid transparent;
 }
 
 #action:active {
