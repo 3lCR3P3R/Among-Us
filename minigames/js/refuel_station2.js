@@ -17,7 +17,7 @@ butFill.onmouseup = function() {
 };
 
 var imagenFondo = new Image();
-imagenFondo.src = "https://i.imgur.com/fnbMX2D.png";
+imagenFondo.src = "https://i.imgur.com/VljZh2G.png";
 
 const LIMITE_CARGA = 110;
 

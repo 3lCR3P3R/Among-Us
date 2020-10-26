@@ -1,3 +1,27 @@
 canvas {
     background-color: #000;
 }
+
+#container {
+    visibility: none;
+    width: 605px;
+    height: 600px;
+}
+
+#butFill {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    left: 490px;
+    top: -123px;
+    text-decoration: none;
+    padding: 40px 44px 48px 40px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+#butFill:active {
+    background-color: black;
+    opacity: 0.1;
+}
