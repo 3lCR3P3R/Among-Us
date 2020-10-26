@@ -1,7 +1,7 @@
 var canvas = document.getElementById("game");
 var ctx = canvas.getContext('2d');
 
-ctx.fillStyle = "rgb(100,1100,255)";
+ctx.fillStyle = "rgb(56,137,210)";
 
 var imagenFondo = new Image();
 imagenFondo.src = "https://i.imgur.com/40xaJKe.png";
