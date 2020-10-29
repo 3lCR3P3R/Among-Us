@@ -3,9 +3,6 @@ var ctx = canvas.getContext('2d');
 
 ctx.fillStyle = "rgb(56,137,210)";
 
-var container = document.getElementById("container");
-
-
 var buttonUno = document.getElementById("uno");
 var buttonDos = document.getElementById("dos");
 var buttonTres = document.getElementById("tres");
@@ -88,12 +85,9 @@ function pintarOrbe(orbec, {posX, posY, ancho, alto}){
 var secuencia, 
     nivel, 
     indSec,
-    increDerArray,
-    increIzqArray,
     transparent = 'background-color: transparent;',
     gray = 'background-color: rgba(115, 115, 115, 0.65);',
-    hitColor = 'background-color: rgba(56, 137, 210, 0.65);',
-    failColor = 'background-color: rgba(208, 47, 0, 0.65);' ;
+    hitColor = 'background-color: rgba(56, 137, 210, 0.65);';
 
 
 function comienzaPartida() {
@@ -105,8 +99,6 @@ function comienzaPartida() {
         secuencia = [];
         indSec = 0;
         nivel = 1;
-        increDerArray = 0;
-        increIzqArray = 0;
     }
 
     function setRandomNumber() {
@@ -118,10 +110,13 @@ function comienzaPartida() {
             pintarRectangulo(cuadros[secuencia[indSec]]);
         }
         else{
-            orbePosCorrect(increDerArray, orbesPosIsq);
             indSec = 0;
             buttomColor(transparent);
-            addEvent();
+            arrayNumberButton.forEach(numButton => {
+                numButton.addEventListener('click', () => {
+                    comprobarNumero(numButton.value)
+                }, true);
+            });
         }
 
         function pintarRectangulo({ posX, posY, ancho, alto}){
@@ -132,7 +127,6 @@ function comienzaPartida() {
         function limpiarTodo(){
             limpiarTablero()
             pintarImagenDeFondo();
-            orbePosCorrect(increIzqArray, orbesPosIsq);
             buttomColor(gray);
             indSec++;
             setTimeout(iniciaSecuencia, 150);
@@ -156,79 +150,64 @@ function comienzaPartida() {
         function hit (numero) {
             arrayNumberButton[numero].style.cssText = hitColor;
             setTimeout(() => {
-                arrayNumberButton[numero].style.cssText = transparent;
-                hitOff()
+                buttomColor(gray)
+            hitOff(numero);
+
             }, 200);
         }
 
-        function hitOff() {
-            increDerArray += 1;
-            orbePosCorrect(increDerArray, orbesPosDer)
+        function hitOff(numero) {
             indSec++;
             if(indSec == secuencia.length){  
-                if (nivel == 5) {
-                    container.style.cssText = ('visibility: hidden;');
-                    alert("Tarea Completada 😎👌");
-                }
                 nivel++;
-                increIzqArray += 1;
-                orbePosCorrect(increIzqArray, orbesPosIsq);
                 setRandomNumber();
-                increDerArray = 0;
-                indDerArray = [];
                 indSec = 0;
-                buttomColor(gray);
                 removeEvent();
-                setTimeout(iniciaSecuencia, 1000);
+                buttomColor(gray);
+                if (secuencia.length == 6) {
+                    alert("Eres la mamada mijo")
+                }
+                else {
+                    setTimeout(iniciaSecuencia, 1000);
+                }
             }
         }
-
-        function orbePosCorrect(limite, orbePos) {
-            for (let i = 0; i < limite; i++) {
-                pintarOrbe(imgOrbeVerde, orbePos[i]);
-            }
-        }
-
+        
         function fail() {
-            removeEvent()
+            removeEvent();
             aniFail();
             setTimeout(() => {
                 aniFail();
             }, 500);
             setTimeout(() => {
-                buttomColor(gray);
-            }, 600);
-            setTimeout(() => {
                 comienzaPartida();
-            }, 1400);
+            }, 1000);
+        }
+        
+        function removeEvent() {
+            arrayNumberButton.forEach(numButton => {
+                numButton.removeEventListener('click', () => {
+                    comprobarNumero(numButton.value)
+                }, true);
+            });
         }
         
         function aniFail() {
-            orbesPosDer.forEach(orbes => {
-                pintarOrbe(imgOrbeRojo, orbes);
-            });
-            buttomColor(failColor)
-            setTimeout(() => {
-                buttomColor(transparent)
-                limpiarTablero();
-                pintarImagenDeFondo();
+            arrayNumberButton.forEach(numButton => {
+                orbesPosDer.forEach(orbes => {
+                    pintarOrbe(imgOrbeRojo, orbes);
+                });
+                numButton.style.cssText = 'background-color: rgba(208, 47, 0, 0.65);';
+                setTimeout(() => {
+                    numButton.style.cssText = 'background-color: transparent';
+                    limpiarTablero();
+                    pintarImagenDeFondo();
                 }, 200);
-        }
-                
-        function addEvent() {
-            arrayNumberButton.forEach(numButton => {
-                numButton.addEventListener('click', _envio, true);
             });
-        }
-
-        function removeEvent() {
-            arrayNumberButton.forEach(numButton => {
-                numButton.removeEventListener('click', _envio, true);
-            });
-        }
-
-        function _envio() {
-            comprobarNumero(this.value)
         }
     }
 }
+
+//Observaciones
+// remove 
+// listanumber

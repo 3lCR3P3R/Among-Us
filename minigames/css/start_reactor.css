@@ -3,74 +3,70 @@ canvas {
 }
 
 #container {
-    visibility: none;
+    visibility: visible;
     width: 1200px;
     height: 680px;
 }
 
-#action {
+.action {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
     padding: 43px 58px 60px 45px;
-    background-color: transparent;
+    background-color: rgba(115, 115, 115, 0.65);
     border-radius: 10px;
     border: 2px solid transparent;
 }
 
-#action:active {
-    background-color: rgba(56, 137, 210, 0.65);
-}
-
-.uno {
+#uno {
     position: relative;
     left: 722px;
     top: -463px;
 }
 
-.dos {
+#dos {
     position: relative;
     left: 736px;
     top: -463px;
 }
 
-.tres {
+#tres {
     position: relative;
     left: 748px;
     top: -463px;
 }
 
-.cuatro {
+#cuatro {
     position: relative;
     left: 390px;
     top: -340px;
 }
 
-.cinco {
+#cinco {
     position: relative;
     left: 402px;
     top: -340px;
 }
 
-.seix {
+#seix {
     position: relative;
     left: 415px;
     top: -340px;
 }
 
-.siete {
+#siete {
     position: relative;
     left: 57px;
     top: -215px;
 }
 
-.ocho {
+#ocho {
     position: relative;
     left: 69px;
     top: -215px;
 }
 
-.nueve {
+#nueve {
     position: relative;
     left: 81px;
     top: -215px;
