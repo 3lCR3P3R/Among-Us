@@ -1,0 +1,102 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #444B54;
+}
+body img{
+    width: 100vw;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.a_among img{
+    opacity: 0.5;
+    width: 100%;
+    margin-top: 7%;
+}
+
+.a_among img:hover{
+    opacity: 0.90;
+}
+
+
+/*-------------INICIO------------*/
+header img{
+    height: 100px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+
+.among_nav{
+    background-color: rgba(68,75,84, 0.7);
+    height: 50px;
+    text-align: center;
+    margin-top: 1%;
+    padding-top: 1%;
+}
+.among_ul li{
+    display: inline;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-family: Berlin Sans FB;
+    font-size: 27px;
+    margin-top: 6%;
+    /* letter-spacing: 1px; */
+}
+
+li a:focus{
+    opacity: 0.6;
+}
+
+/* --------------------------------------- */
+
+.among_desc{
+    display: flex;
+}
+
+.amarisho{
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 80%;
+    height: auto;
+    background-color: #444B54;
+    padding-left: 6%;
+}
+.amarisho img{
+    width: 45%;
+    height: 75%;
+    margin-top: 3%;
+    margin-bottom: -3%;
+}
+.amarisho ul{
+    margin-top: 5%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+.amarisho li{
+    display: inline-block;
+    font-family: Berlin Sans FB;
+    font-weight: 600;
+    font-size: 30px;
+    margin-right: 10%;
+}
+
+
+footer{
+    background-color: #444B54;
+    margin-top: 14%;
+    padding-left: 10%;
+    height: 57px;
+    color: aliceblue;
+    font-family: Berlin Sans FB;
+    padding-top: 23px;
+    opacity: 0.8;
+}

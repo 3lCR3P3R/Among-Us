@@ -1,0 +1,148 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #444B54;
+}
+body img{
+    width: 100vw;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.a_among img{
+    opacity: 0.5;
+    width: 100%;
+    margin-top: 7%;
+}
+
+.a_among img:hover{
+    opacity: 0.90;
+}
+
+
+/*-------------INICIO------------*/
+header img{
+    height: 100px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+
+.among_nav{
+    background-color: rgba(68,75,84, 0.7);
+    height: 50px;
+    text-align: center;
+    margin-top: 1%;
+    padding-top: 1%;
+}
+.among_ul li{
+    display: inline;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-family: Berlin Sans FB;
+    font-size: 27px;
+    margin-top: 6%;
+    /* letter-spacing: 1px; */
+}
+
+li a:focus{
+    opacity: 0.6;
+}
+
+/* ---------------------------------------- */
+
+.among_menu{
+    padding: 5%;
+}
+
+.among_caf-img img{
+    width: 30%;
+    height: auto;
+    margin-top: 12%;
+}
+.among_caf-img img:hover{
+    border: 1px solid white;
+}
+.among_menu a{
+    text-decoration: none;
+    color: white;
+    font-family: Berlin Sans FB;
+    font-size: 30px;
+}
+.among_menu a:hover{
+    color: blue;
+}
+.among_caf{
+    text-align: center;
+}
+.among_caf-fle img{
+    height: auto;
+    transform: rotate(270deg);
+    margin-left: -11%;
+    margin-top: 4%;
+    position: absolute;
+    width: 7%;
+}
+.among_caf_tit{
+    position: absolute;
+    margin-left: -12%;
+    margin-top: -1%;
+}
+.among_caf-fle4 img{
+    height: auto;
+    transform: rotate(180deg);
+    margin-left: -22%;
+    margin-top: 15.5%;
+    position: absolute;
+    width: 7%;
+}
+.among_caf_tit4{
+    position: absolute;
+    margin-left: -26%;
+    margin-top: 16%;
+}
+.among_caf-fle2 img{
+    height: auto;
+    position: absolute;
+    margin-top: 0.2%;
+    margin-left: -11%;
+    transform: rotate(90deg);
+    width: 7%;
+}
+.among_caf_tit2{
+    position: absolute;
+    margin-left: -12%;
+    margin-top: 7%;
+}
+.among_caf-fle3 img{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: -20%;
+    width: 7%;
+    height: auto;
+}
+.among_caf_tit3{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: -18%;
+}
+
+
+
+footer{
+    background-color: #444B54;
+    margin-top: 4%;
+    padding-left: 10%;
+    height: 57px;
+    color: aliceblue;
+    font-family: Berlin Sans FB;
+    padding-top: 23px;
+    opacity: 0.8;
+}
