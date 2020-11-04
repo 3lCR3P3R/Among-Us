@@ -14,8 +14,13 @@ butFill.onmouseup = function() {
     clearInterval(interval);
     interval = null;
 };
+
 var imagenFondo = new Image();
 imagenFondo.src = "https://i.imgur.com/O8a90p8.png";
+imagenFondo.onload = () => { 
+    pintarRectangulo(refuelStation); 
+    pintarImagenDeFondo();
+}
 
 const LIMITE_CARGA = 60;
 
@@ -28,11 +33,6 @@ function rect(posX, posY, ancho, alto) {
 
 var refuelStation = new rect(30, 480, 300, 10);
 var interval = null;
-
-window.onload = () => {
-    pintarRectangulo(refuelStation); 
-    pintarImagenDeFondo();
-}
 
 function moverRectangulo(rect){
     

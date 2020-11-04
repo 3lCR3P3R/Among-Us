@@ -18,6 +18,14 @@ butFill.onmouseup = function() {
 
 var imagenFondo = new Image();
 imagenFondo.src = "https://i.imgur.com/VljZh2G.png";
+imagenFondo.onload = () => { 
+    pintarRectangulo(refuelStation); 
+    ctx.save();
+    ctx.rotate(33 * Math.PI / 180);
+    pintarRectangulo(miniRefuelStation);  
+    ctx.restore();
+    pintarImagenDeFondo();
+}
 
 const LIMITE_CARGA = 110;
 
@@ -31,15 +39,6 @@ function rect(posX, posY, ancho, alto) {
 var refuelStation = new rect(30, 485, 300, 10);
 var miniRefuelStation = new rect(290, -115, -80, 68);
 var interval = null;
-
-window.onload = () => {
-    pintarRectangulo(refuelStation); 
-    ctx.save();
-    ctx.rotate(33 * Math.PI / 180);
-    pintarRectangulo(miniRefuelStation);  
-    ctx.restore();
-    pintarImagenDeFondo();
-}
 
 function moverRectangulo(rect){
     if(interval === null){
