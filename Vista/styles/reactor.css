@@ -96,6 +96,16 @@ li a:focus{
     margin-top: -17%;
 }
 
+.among_caf-img2 img{
+    position: absolute;
+    height: auto;
+    margin-top: -28.5%;
+    margin-left: 16.2%;
+    width: 3.5%;
+} 
+
+/* ---------------------------------- */
+
 .modal-contenido{
     width: 400px;
     padding: 10px 20px;
@@ -117,9 +127,21 @@ li a:focus{
     pointer-events:auto;
 }
 
-table div, tr, th{
-    cursor: pointer;
+.img_modal-x{
+    height: auto;
+    position: absolute;
+    margin-top: -25.5%;
+    margin-left: -13%;
+    width: 7%;
 }
+.img_modal{
+    height: auto;
+    margin-top: -35%;
+    margin-left: -22%;
+    width: 150%;
+}
+
+/* -------------------------------------------- */
 
 footer{
     background-color: #444B54;
@@ -130,4 +152,55 @@ footer{
     font-family: Berlin Sans FB;
     padding-top: 23px;
     opacity: 0.8;
+}
+
+
+.modal2{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+}
+#miModalT:target{
+    opacity: 1;
+    pointer-events:auto;
+}
+.img_modal2-x{
+    height: 100px;
+    position: absolute;
+    margin-top: 12.5%;
+    margin-left: 36%;
+    width: 3%;
+}
+
+
+.content_img{
+    height: 123px;
+    margin-left: 39.4%;
+    margin-top: 17%;
+    width: 22%;
+}
+.content div{
+    color: #334574;
+    font-size: 20px;
+}
+table {
+    /* height: 68px; */
+    background-color: #8FA1D0;
+    position: absolute;
+    margin: -8.3% 3% 3% 41.5%;
+    width: 18%;
+}
+
+th {
+    height: 35px;
+    border: solid #0B3DBA;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    width: 3%;
 }

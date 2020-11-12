@@ -24,7 +24,10 @@
     <div class="among_menu">
         <div class="among_caf">
             <div class="among_caf-img">
-                <a href="#miModal" onclick="xd()"><img src="../img/reactor.png" alt="Reactor"></a>
+                <a href="#miModalT"><img src="../img/reactor.png" alt="Reactor"></a>
+            </div>
+            <div class="among_caf-img2">
+                <a href="#miModal"><img src="../img/icono-mapa.png"></a>
             </div>
             <div class="among_caf-fle3">
                 <a class="among_caf_tit3" href="./pasillo2.html">Pasillo</a><br>
@@ -40,28 +43,52 @@
 
 </html>
 
-
- <!-- <a href="#miModal">Abrir Modal</a> -->
- <div id="miModal" class="modal">
+<div id="miModal" class="modal">
     <div class="modal-contenido">
-      <a href="./reactor.html">X</a>
-      <table>
+        <a href="./reactor.html"><img src="../img/map_x.png" class="img_modal-x"></a>
+        <img src="../img/Map_blue.jpg" class="img_modal">
+    </div>  
+</div>
+
+
+
+<div id="miModalT" class="modal2 content">
+    <a href="./reactor.html"><img src="../img/x_table.png" class="img_modal2-x"></a>
+    <img src="../img/Unlock_Manifolds_Skeld.png" class="content_img">
+    <table>
         <tr>
             <th>
-                <div id="posicion_1"></div>
-                <div id="posicion_2"></div>
-                <div id="posicion_3"></div>
-                <div id="posicion_4"></div>
-                <div id="posicion_5"></div>
+                <div id="9" onclick="xd(9);">9</div>
             </th>
-            <ht>
-                <div id="posicion_6"></div>
-                <div id="posicion_7"></div>
-                <div id="posicion_8"></div>
-                <div id="posicion_9"></div>
-                <div id="posicion_10"></div>
-            </ht>
+            <th>
+                <div id="5" onclick="xd(5);">5</div>
+            </th>
+            <th>
+                <div id="2" onclick="xd(2);">2</div>
+            </th>
+            <th>
+                <div id="4" onclick="xd(4);">4</div>
+            </th>
+            <th>    
+                <div id="7" onclick="xd(7);">7</div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div id="3" onclick="xd(3);">3</div>
+            </th>
+            <th>
+                <div id="1" onclick="xd(1);">1</div>
+            </th>
+            <th>
+                <div id="10" onclick="xd(10);" style="font-size: 17px;">10</div>
+            </th>
+            <th>
+                <div id="6" onclick="xd(6);">6</div>
+            </th>
+            <th>
+                <div id="8" onclick="xd(8);">8</div>
+            </th>
         </tr>
     </table>
-    </div>  
-  </div>
+</div> 
